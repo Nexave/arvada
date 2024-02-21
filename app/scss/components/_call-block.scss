@@ -1,0 +1,33 @@
+.call-block{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &-inner{
+    padding-top: 80px;
+    text-align: center;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 64px;
+      background-color: #242627;
+      top: 0;
+      left: 50%;
+    }
+    .text{
+      font-size: 32px;
+      line-height: 37px;
+      text-align: center;
+      font-family: var(--tenor);
+      margin-bottom: 30px;
+      @include ipad{
+        font-size: 26px;
+        line-height: 30px;
+      }
+      @include mobile{
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
+}

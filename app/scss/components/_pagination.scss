@@ -1,0 +1,51 @@
+.wp-pagenavi{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .prev{
+    width: 14px;
+    height: 25px;
+    background: url('../img/icons/chevron-left-icon.svg') no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+  }
+  .next{
+    width: 14px;
+    height: 25px;
+    background: url('../img/icons/chevron-right-icon.svg') no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+  }
+  .page-numbers{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+    text-decoration: none;
+    color:  #242627;
+    &.current{
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      color: #00A9B0;
+      background-color:#EDEEEA ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+  }
+
+}
+.faq-list{
+  .wp-pagenavi{
+    padding-bottom: 65px;
+    @include ipad{
+      padding-bottom: 55px;
+    }
+    @include mobile{
+      padding-bottom: 45px;
+    }
+  }
+}

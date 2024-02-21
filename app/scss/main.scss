@@ -1,0 +1,159 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+@import "_mixins/font-face";
+@import "_mixins/responsive";
+@import "components/index";
+// CSS Variables
+:root {
+  --white: #ffffff;
+  --dmsans: 'DmSans', sans-serif;
+  --tenor: 'TenorSans', sans-serif;
+  --grey:#EDEEEA;
+  --green:#79977C;
+  --accent-color:#00A9B0;
+
+}
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+html {
+
+  width: 100%;
+
+  //overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &.hidden {
+    overflow: hidden;
+    position: fixed;
+  }
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+
+}
+
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0;
+  font-weight: 400;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--dmsans);
+  color: #242627;
+  height: 100%;
+
+}
+
+main {
+  flex: 1 0 auto;
+
+
+}
+nav {
+  list-style-type: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a{
+  color: var(--accent-color);
+}
+footer {
+  flex: 0 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.container {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+  width: 100%;
+  @include mobile{
+    padding: 0 24px;
+  }
+}
+
+h1,.h1{
+  font-family: var(--tenor);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 75px;
+  @include ipad{
+    font-size: 36px;
+    line-height: 42px;
+  }
+  @include mobile{
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+h2,.h2{
+  font-family: var(--tenor);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  @include ipad{
+    font-size: 26px;
+    line-height: 30px;
+  }
+  @include mobile{
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

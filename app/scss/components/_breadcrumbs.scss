@@ -1,0 +1,39 @@
+.breadcrumbs{
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: flex;
+  align-items: flex-start;
+  &-inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-item{
+    position: relative;
+    margin-right: 11px;
+    &:after{
+      position: absolute;
+      content: "";
+      height: 12px;
+      width: 1px;
+      background-color: var(--green);
+      right: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:last-of-type{
+      &:after{
+        display: none;
+      }
+
+    }
+    a{
+      color: var(--green);
+      text-decoration: none;
+    }
+
+  }
+  .icon{
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+}

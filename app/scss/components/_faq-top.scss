@@ -1,0 +1,60 @@
+.faq-top{
+  overflow: hidden;
+  &-inner{
+    padding-top: 8px;
+    display: flex;
+    @include ipad{
+      padding-top: 10px;
+    }
+    @include mobile{
+      padding-top: 14px;
+    }
+    .img-block{
+      width: calc(50vw - 20px);
+      min-height: 364px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include ipad{
+        min-height: 208px;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+    .left-block{
+      width: calc( 50% + 20px);
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 54px;
+      @include ipad{
+        padding-right: 24px;
+      }
+      @include mobile{
+        padding-right: 0;
+        width: 100%;
+      }
+      .title{
+        margin-bottom: 16px;
+      }
+      .text{
+        font-size: 32px;
+        line-height: 37px;
+        font-family: var(--tenor);
+        padding-bottom: 10px;
+        @include ipad{
+          font-size: 26px;
+          line-height: 30px;
+        }
+        @include mobile{
+          font-size: 22px;
+          line-height: 26px;
+        }
+
+      }
+    }
+  }
+}

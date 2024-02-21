@@ -1,0 +1,121 @@
+.footer {
+  background-color: #EDEEEA;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 429px;
+    height: 193px;
+    background: url("../img/decor/decor-line3.png") no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+  }
+  &-logo{
+    max-width: 269px;
+    height: auto;
+    @include ipad{
+      display: none;
+    }
+
+  }
+  &-inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+
+  @include mobile{
+    flex-wrap: wrap;
+
+    padding: 30px 16px 48px 16px;
+  }
+
+    .menu-item {
+      margin-bottom: 16px;
+
+      a {
+        font-size: 16px;
+        line-height: 21px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #242627;
+        white-space:nowrap;
+        transition: all 0.5s ease;
+        &:hover{
+          color: var(--green);
+
+        }
+      }
+    }
+
+  }
+
+  .contact-block {
+    max-width: 220px;
+    @include mobile{
+      max-width: unset;
+      width: 100%;
+      padding-top: 40px;
+      position: relative;
+      margin-top: 4px;
+      &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -40px;
+        width: 100vw;
+        height: 1px;
+        background-color:  #CBDECD;
+      }
+    }
+
+    &-item {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 18px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &.phone {
+        .contact-block-link {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 31px;
+        }
+      }
+
+    }
+
+    &-link {
+      font-size: 16px;
+      line-height: 21px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #242627;
+      transition: all 0.5s ease;
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+  }
+
+
+}

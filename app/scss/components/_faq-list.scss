@@ -1,0 +1,74 @@
+.faq{
+  &-list-inner{
+    padding-top: 84px;
+    padding-bottom: 65px;
+    @include ipad{
+      padding-top: 100px;
+      padding-bottom: 30px;
+    }
+    @include mobile{
+      padding-top: 60px;
+    }
+  }
+  &-item{
+    margin-bottom: 60px;
+    @include mobile{
+      margin-bottom: 40px;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    &-title-wrapper{
+      background: #EDEEEA;
+      border-radius: 30px 0px;
+      padding: 50px 22px 42px 22px;
+      margin-bottom: 40px;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 35px;
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        background-color: #EDEEEA ;
+        left: 92px;
+        bottom: -26px;
+        @include mobile{
+          left: 75px;
+        }
+      }
+      @include  ipad{
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      @include mobile{
+        padding: 20px 16px;
+      }
+
+    }
+    &-title{
+      font-size: 32px;
+      line-height: 42px;
+      @include ipad{
+        font-size: 26px;
+        line-height: 34px;
+      }
+      @include mobile{
+        font-size: 22px;
+        line-height: 29px;
+      }
+    }
+    &-text{
+      font-size: 26px;
+      line-height: 34px;
+      @include ipad{
+        font-size: 20px;
+        line-height: 26px;
+      }
+      @include mobile{
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  }
+}

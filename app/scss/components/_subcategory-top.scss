@@ -1,0 +1,57 @@
+.subcategory-top{
+  background-color: #EDEEEA;
+  padding-top: 64px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+  @include ipad{
+    padding-bottom: 40px;
+  }
+  @include mobile{
+    padding-top: 40px;
+  }
+  &:before{
+    position: absolute;
+    content: "";
+    width: 313px;
+    height: 205px;
+    background: url('../img/decor/decor-line4.png') no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 235px;
+    background: url('../img/decor/decor-line5.png') no-repeat;
+    background-size: contain;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .img-block{
+    height: 554px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include ipad{
+      height: 279px;
+    }
+    @include mobile{
+      height: 241px;
+    }
+  }
+  .title{
+    padding-right: 40px;
+    margin-bottom: 40px;
+    @include ipad{
+      padding-right: 0;
+    }
+    @include mobile{
+      text-align: center;
+    }
+  }
+}

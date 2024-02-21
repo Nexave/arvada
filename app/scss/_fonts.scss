@@ -1,0 +1,4 @@
+@import "_mixins/font-face";
+
+@include font-face("DmSans", "../fonts/DmSansRegular/DMSans-Regular", 400);
+@include font-face("TenorSans", "../fonts/TenorSansRegular/TenorSans", 400);
